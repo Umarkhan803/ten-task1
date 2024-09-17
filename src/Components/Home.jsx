@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Button from "./Button";
-import Slider from "./Slider";
+import SliderComponent from "./SliderComponent";
 
 const Home = ({ bookingText }) => {
   return (
@@ -38,8 +38,8 @@ const Home = ({ bookingText }) => {
           />
         </div>
       </section>
-      <section className="slider">
-        <Slider />
+      <section>
+        <SliderComponent />
       </section>
     </>
   );

@@ -30,6 +30,7 @@
   margin-top: 50px;
 }
 .Home-page ul li {
+  gap: 0 20px;
   margin: 15px 0 15px;
 }
 .banner-image {
@@ -37,4 +38,10 @@
 }
 .banner-image img {
   width: 450px;
+}
+/*---------- slider */
+
+.sliders {
+  /* display: flex; */
+  width: 1000px;
 }
