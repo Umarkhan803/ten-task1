@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  background: rgb(226, 65, 226);
   background: linear-gradient(
     324deg,
     rgba(226, 65, 226, 1) 0%,
@@ -30,8 +29,10 @@
   margin-top: 50px;
 }
 .Home-page ul li {
-  gap: 0 20px;
   margin: 15px 0 15px;
+}
+.Home-page ul li span {
+  margin-left: 10px;
 }
 .banner-image {
   padding-top: 50px;
@@ -44,4 +45,146 @@
 .sliders {
   /* display: flex; */
   width: 1000px;
+}
+
+/* --------Possibilities */
+.Possibilities {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background-color: #fffbfb;
+}
+.Possibilities-heading {
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+}
+.Possibilities-heading h1 {
+  font-size: 2.5rem;
+  color: #002863;
+  font-weight: 500;
+}
+.Possibilities-heading p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #002863;
+  font-weight: 500;
+}
+.Possibilities-image img {
+  width: 400px;
+}
+
+.Possibilities-container {
+  display: flex;
+  width: 100%;
+  color: #002863;
+  align-items: center;
+  gap: 50px;
+  height: 100%;
+}
+.Possibilities-card {
+  display: flex;
+  height: 10vh;
+  margin: 80px 0;
+}
+.Possibilities-card img {
+  width: 200px;
+  object-fit: contain;
+}
+.card-text h2 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.Solution-page {
+  width: 100%;
+  background-color: #ffe4d0;
+  height: 500px;
+  padding: 20px;
+}
+.solution-heading {
+  height: 150px;
+  width: 100%;
+  text-align: center;
+}
+.solution-heading h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #002863;
+  letter-spacing: -1px;
+}
+.solution-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.solution-container ul li {
+  color: #002863;
+  margin: 15px 0px;
+}
+.solution-container ul li span {
+  margin: 15px;
+}
+.solution-image img {
+  width: 500px;
+  border-radius: 10px;
+}
+/* -------genius-section */
+.genius-header {
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+  line-height: 50px;
+}
+.genius-header h1 {
+  font-size: 2.2rem;
+  color: #002863;
+  letter-spacing: -1px;
+  font-weight: 500;
+}
+.genius-header h2 {
+  color: #002863;
+  font-weight: 400;
+}
+.genius-section {
+  padding: 2rem;
+}
+.genius-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.building {
+  width: 48%;
+  text-align: center;
+}
+.building iframe {
+  width: 480px;
+  height: 320px;
+  border-radius: 12px;
+}
+.fill {
+  width: 80%;
+  height: 80%;
+}
+.building iframe p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.genius-text {
+  padding: 0 150px;
+}
+.genius-text li {
+  margin: 40px 0;
+}
+.genius-text li span {
+  font-size: 2rem;
+  margin-right: 20px;
+  color: #ff3f4e;
+  font-weight: 600;
 }

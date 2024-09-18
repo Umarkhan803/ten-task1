@@ -6,10 +6,11 @@ import "slick-carousel/slick/slick-theme.css";
 function App() {
   const navText = "Start for INR 499";
   const bookingText = "Book a Demo Slot";
+  const explore = "explore the Details";
   return (
     <>
       <NavBar text={navText} />
-      <Home bookingText={bookingText} />
+      <Home bookingText={bookingText} explore={explore} />
     </>
   );
 }
