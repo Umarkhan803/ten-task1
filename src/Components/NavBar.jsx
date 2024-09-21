@@ -45,7 +45,7 @@ const NavBar = ({ text, enroll }) => {
                 </li>
                 <li className="navLink">
                   <Link to="/premium_program" target="_blank">
-                    premium Program
+                    Premium Program
                   </Link>
                 </li>
                 <li className="navLink">
