@@ -2,10 +2,19 @@ import React, { useRef, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Button from "./Button";
 import SliderComponent from "./SliderComponent";
+import Modal from "./Modal";
 
 const Home = ({ bookingText, explore, start, enroll }) => {
   const carouselRef = useRef(null); //
+  const [showModal, setShowModal] = useState(false);
 
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
   const list = [
     {
       img: "https://www.uptodd.com/images/newWebsite/possibility1.webp",
@@ -500,7 +509,13 @@ const Home = ({ bookingText, explore, start, enroll }) => {
           ))}
         </div>
         <div className="program-test">
-          <p>Want to know more about program see here</p>
+          <p>
+            Want to know more about program
+            <span onClick={openModal}>see here</span>
+          </p>
+          <Modal show={showModal} onClose={closeModal} title="My Modal">
+            <p>This is the content inside the modal.</p>
+          </Modal>
         </div>
       </section>
       <section className="developmental-kit">
