@@ -188,3 +188,403 @@
   color: #ff3f4e;
   font-weight: 600;
 }
+/* -------genius-babies */
+.carousel-container {
+  background-image: url("https://www.uptodd.com/images/newWebsite/genius-babies-background.png");
+  background-color: #5a40c4;
+  background-size: cover;
+  color: white;
+  padding: 40px 0px 90px 0px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.carousel-header h1 {
+  font-size: 2.5rem;
+  letter-spacing: -3px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.carousel-header p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  padding: 0px 10px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.carousel {
+  display: flex;
+  scroll-behavior: smooth;
+  overflow-x: auto; /* Horizontal scrolling */
+  gap: 20px; /* Space between cards */
+  scroll-snap-type: x mandatory;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.carousel-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-card {
+  min-width: 300px; /* Ensure each card has a minimum width */
+  flex: 0 0 auto; /* Prevent shrinking */
+  background: white;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 20px;
+  max-width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  scroll-snap-align: start;
+}
+
+.carousel-card h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: start;
+  color: #002863;
+}
+
+.carousel-card iframe {
+  text-align: center;
+  border-radius: 20px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.prev {
+  left: 100px;
+}
+
+.next {
+  right: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel-card,
+  .carousel-card iframe {
+    min-width: 200px;
+    max-width: 250px;
+  }
+}
+/* ------------developmental-pillars */
+.developmental-pillars {
+  padding: 50px;
+  background: #fffbfb;
+  width: 100%;
+  height: 100%;
+  color: #002863;
+}
+.development-head {
+  text-align: center;
+  width: 100%;
+  height: 20vh;
+}
+.development-head h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: -3px;
+}
+.development-head h2 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 20px;
+}
+.development-head p {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+.development-head p span {
+  font-weight: 600;
+}
+.development-container {
+  display: flex;
+  width: 100%;
+  margin-top: 80px;
+
+  justify-content: space-around;
+}
+.development-card {
+  border: 1px solid #002863;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+  width: 600px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: width 0.3s ease, height 0.3s ease; /* Smooth transition */
+}
+.development-card ul {
+  display: none;
+}
+.development-card.active ul {
+  padding: 0px 10px;
+  display: flex;
+}
+.development-card h2 {
+  font-weight: 400;
+}
+.development-image {
+  margin-top: 100px;
+}
+.development-image img {
+  width: 450px;
+}
+.four-pillars-list {
+  margin: 15px 0;
+  display: flex;
+}
+.four-pillars-list ul {
+  flex-direction: column;
+  padding: 0px 15px 0px 0px;
+}
+.four-pillars-list ul li {
+  margin-top: 0px;
+}
+.four-pillars-list ul li span {
+  margin-left: 10px;
+}
+.developmental-pillars-footer {
+  margin-top: 25px;
+  width: 100%;
+  text-align: center;
+}
+.developmental-pillars-footer p {
+  margin-top: 20px;
+}
+.start-now-banner {
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 100%;
+  background: #5a40c4;
+}
+/* -------------------------product-and-cost */
+.product-and-cost {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+.product-and-cost-header {
+  padding-bottom: 50px;
+  width: 100%;
+  color: #002863;
+  text-align: center;
+}
+.product-and-cost-header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: -3px;
+}
+.product-and-cost-header h2 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.product-and-cost-header h3 {
+  font-weight: 300;
+}
+.product-and-cost-list {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product-and-cost-container {
+  display: flex;
+  color: #002863;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.product-and-cost-list li {
+  margin-right: 50px;
+  font-size: 20px;
+}
+.product-and-cost-container-card {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.product-and-cost-card {
+  padding: 20px 15px;
+
+  border: 2px solid #5a40c4;
+  border-radius: 15px;
+  color: #002863;
+  height: 350px;
+  text-align: center;
+  width: 460px;
+}
+.product-and-cost-card h1 {
+  color: #ff3f4e;
+  font-size: 25px;
+  margin-bottom: 10px;
+  letter-spacing: -2px;
+  font-weight: 500;
+}
+.product-and-cost-card h2 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.product-and-cost-card p {
+  font-weight: 400;
+}
+.card-perMonth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  background-color: #f5f5f5;
+  margin: 10px 0;
+}
+.card-perMonth span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.product-and-cost-card h3 {
+  display: inline;
+  font-size: 2rem;
+  font-weight: 500;
+  justify-content: center;
+}
+.product-and-cost-card del {
+  font-weight: 600;
+}
+.enroll-btn {
+  margin-top: 10px;
+}
+.program-test {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.developmental-kit {
+  position: relative;
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 20vh;
+}
+.kit-intro {
+  width: 463px;
+  display: flex;
+  color: #002863;
+  padding: 24px;
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    rgb(255 63 78 / 0.11) 0%,
+    rgb(90 64 196 / 0.11) 100%
+  );
+  justify-content: space-between;
+}
+.kit-video iframe {
+  border-radius: 12px 12px 12px 12px;
+}
+.kit-video h3 {
+  width: 300px;
+  padding: 6px 0;
+  text-align: center;
+  background: #5a40c4;
+  color: #fff;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: -0.48px;
+  position: absolute;
+  bottom: -23%;
+  border-radius: 0 0 12px 12px;
+}
+.awared-babies {
+  width: 100%;
+  padding: 70px 0 70px;
+  padding-top: 70px;
+  padding-right: 0px;
+  position: relative;
+  padding-bottom: 70px;
+  padding-left: 0px;
+  background: #fffbfb;
+}
+.awared-babies h1,
+.awared-babies h1 span {
+  color: #002863;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 68px;
+  letter-spacing: -1.6px;
+}
+.awared-babies h1 span {
+  font-weight: 400;
+}
+.baby-award-list-container {
+  position: relative;
+}
+.baby-award-list {
+  margin: auto;
+  margin-top: 36px;
+  width: 81%;
+  display: flex;
+  overflow-x: scroll;
+}
+.carousel-card {
+  min-width: 350px;
+  border-radius: 12px;
+  color: #002863;
+  background: #fffbfb;
+  box-shadow: 0 4px 12px 0 rgb(19 15 46 / 0.06);
+  margin-bottom: 20px;
+}
+.carousel-card img {
+  width: 100%;
+}
+.baby-award-slider-next,
+.baby-award-slider-prev {
+  position: absolute;
+  top: 45%;
+  right: 7.5%;
+  width: 44px;
+  cursor: pointer;
+}
+.baby-award-slider-prev {
+  left: 7.5%;
+  display: none;
+}
