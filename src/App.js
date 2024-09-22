@@ -14,6 +14,9 @@ function App() {
   const explore = "Explore the Details";
   const start = "Start Now";
   const enroll = "Enroll Now";
+  const babyKit = "Baby Kit";
+  const program = "Program";
+  const enrollmentBtn = "Enrollment";
   return (
     <>
       <BrowserRouter>
@@ -27,6 +30,9 @@ function App() {
                 enroll={enroll}
                 start={start}
                 explore={explore}
+                enrollmentBtn={enrollmentBtn}
+                program={program}
+                babyKit={babyKit}
               />
             }
           />

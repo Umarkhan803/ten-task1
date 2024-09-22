@@ -3,10 +3,26 @@ import { FaCheckCircle } from "react-icons/fa";
 import Button from "./Button";
 import SliderComponent from "./SliderComponent";
 import Modal from "./Modal";
+import { FaqProgram, FaqBabyKit, Enrollment } from "../Lists/faq";
+import { premiumProgram } from "../Lists/premiumProgram";
+import { list } from "../Lists/list";
+import { cards } from "../Lists/card";
+import { pillarsList } from "../Lists/pillarsList";
+import { babyAwardList } from "../Lists/babyAwardList";
+import { boardMembers } from "../Lists/boardMembers";
 
-const Home = ({ bookingText, explore, start, enroll }) => {
-  const carouselRef = useRef(null); //
+const Home = ({
+  bookingText,
+  explore,
+  start,
+  enroll,
+  enrollmentBtn,
+  babyKit,
+  program,
+}) => {
+  const carouselRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
+  const [activeContent, setActiveContent] = useState("FaqProgram");
 
   const openModal = () => {
     setShowModal(true);
@@ -15,38 +31,15 @@ const Home = ({ bookingText, explore, start, enroll }) => {
   const closeModal = () => {
     setShowModal(false);
   };
-  const list = [
-    {
-      img: "https://www.uptodd.com/images/newWebsite/possibility1.webp",
-      heading:
-        "Seeking a holistic program for your child's early brain development?",
-      text: "UpTodd offers a one-stop solution with personalized physical kits and an expert-guided program to support your child's brain development.",
-    },
-    {
-      img: "https://www.uptodd.com/images/newWebsite/possibility2.webp",
-      heading:
-        "Need help identifying and nurturing your child's unique talents early on?",
-      text: "We create a brain-stimulating environment to support the development of special skills as part of our comprehensive parenting program for baby.",
-    },
-    {
-      img: "https://www.uptodd.com/images/newWebsite/possibility3.webp",
-      heading:
-        "Concerned about screen time affecting your child’s development?",
-      text: "UpTodd's special tech-driven product reduces screen time and boosts your baby's neural connections, thus stimulating brain development.",
-    },
-    {
-      img: "https://www.uptodd.com/images/newWebsite/possibility4.webp",
-      heading: "Looking for effective ways to boost your child's IQ and EQ?",
-      text: "Our scientifically-backed methods enhance IQ and EQ with a specially curated program focuessed on infant conginitve growth, just for your baby.",
-    },
-  ];
-  const [clickedCardId, setClickedCardId] = useState(null);
 
-  // Handle card click
   const handleCardClick = (id) => {
-    setClickedCardId(id); // Set the clicked card ID
+    setClickedCardId(id);
   };
-
+  const handleCardClickForFaq = (id) => {
+    setFaqBabyKitId(id);
+    setFaqEnrollment(id);
+    setFaqProgramId(id);
+  };
   const handlePrev = () => {
     if (carouselRef.current) {
       const cardWidth =
@@ -66,187 +59,67 @@ const Home = ({ bookingText, explore, start, enroll }) => {
       carouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
-  const cards = [
-    {
-      title:
-        "Rishit can observe 300+ fruits & vegetables, Lets see how he does?",
-      videoUrl: "https://www.youtube.com/embed/ku6AjmjCcH4?si=GKga_botv-EwNq8W",
-    },
-    {
-      title: "5 month baby can identify 100+ flashcards",
-      videoUrl: "https://www.youtube.com/embed/ku6AjmjCcH4?si=GKga_botv-EwNq8W",
-    },
-    {
-      title: "4.5 months Recognizes 100 Animals & Flowers",
-      videoUrl: "https://www.youtube.com/embed/ku6AjmjCcH4?si=GKga_botv-EwNq8W",
-    },
-    {
-      title:
-        "Baby just knows everything, high IQ level- 300+ cards recognition",
-      videoUrl: "https://www.youtube.com/embed/ku6AjmjCcH4?si=GKga_botv-EwNq8W",
-    },
-    {
-      title: "Just 3 months old and rolling over without any help",
-      videoUrl: "https://www.youtube.com/embed/ku6AjmjCcH4?si=GKga_botv-EwNq8W",
-    },
-    {
-      title:
-        "8 months baby can follow complex instructions with ease - Exceeding all Milestones",
-      videoUrl: "https://www.youtube.com/embed/ku6AjmjCcH4?si=GKga_botv-EwNq8W",
-    },
-  ];
-  const pillarsList = [
-    {
-      id: 1,
-      title: "4 Cognitive Pillars",
-      text1: "Lingustic Champion",
-      text2: "Logic Master",
-      text3: "Memory Powerhouse",
-      text4: "Curious Explorer",
-    },
-    {
-      id: 2,
-      title: "4 Physical Pillars",
-      text1: "Vitality",
-      text2: "Vigour",
-      text3: "Equilibrium & Agility",
-      text4: "Dexterity",
-    },
-    {
-      id: 3,
-      title: "4 Moral pillars",
-      text1: "Leadership Skills",
-      text2: "Honest Charm",
-      text3: "Empathetic Heart",
-      text4: "Harmony Hues",
-    },
-    {
-      id: 4,
-      title: "4 Creativity pillars",
-      text1: "Inventive Ideator",
-      text2: "Artistic Champ",
-      text3: "Drama & Creations",
-      text4: "Rhythmic Explorations",
-    },
-    {
-      id: 5,
-      title: "Intuition & Foresight Development",
-      text1: "Intuition Skills",
-      text2: "Foresight Vision",
-    },
-  ];
 
-  const premiumProgram = [
-    {
-      text1: "Super Premium Program",
-      text2: "1 Year Personalised Program",
-      text3:
-        "(2 Mega Personalised Kits : Total 4 Sets of Kit, covering 3 Months each)",
-      perMonth: "INR 3242 Per Month",
-      discountPrice: "INR 38,900 ",
-      deletePrice: "INR 120,900",
-    },
-    {
-      text1: "Standard Premium Program",
-      text2: "6 Months Personalised Program",
-      text3:
-        "(1 Mega Personalised Kits : Total 2 Sets of Kit, covering 3 Months each)",
-      perMonth: "INR 3984 Per Month",
-      discountPrice: " INR 70,900",
-      deletePrice: "INR 23,900 ",
-    },
-  ];
-  const babyAwardList = [
-    {
-      id: 1,
-      img: "https://www.uptodd.com/images/newWebsite/awards/dhruvut.webp",
-      title: "Dhruvut - Kalam's World Record",
-      description:
-        "Uptodds Little Genius identified 416 Flashcards within 10 Minutes",
-    },
-    {
-      id: 2,
-      img: "https://www.uptodd.com/images/newWebsite/awards/freya.webp",
-      title: "Freya - Young Milestone Achiever",
-      description:
-        "UpTodd's Little Genius recorded identification of record 60+flashcards in 7 minutes",
-    },
-    {
-      id: 3,
-      img: "https://www.uptodd.com/images/newWebsite/awards/aastik.webp",
-      title: "Freya - Young Milestone Achiever",
-      description: " Aastik - International Book of REX Award",
-    },
-    {
-      id: 4,
-      img: "https://www.uptodd.com/images/newWebsite/awards/Tejasawi.webp",
-      title: "Tejasawi - NYT Times - Little Genius",
-      description:
-        "  UpTodd's Little Genius recorded solving 4 sets of 16 pattern puzzles in 218 seconds",
-    },
-    {
-      id: 5,
-      img: "https://www.uptodd.com/images/newWebsite/awards/kedar.webp",
-      title: "Kedar - Wall Street - Gloabal Awardee",
-      description:
-        "UpTodd's Little Genius stood as Rank-1 in 10 different events, among most talented global babies",
-    },
-    {
-      id: 6,
-      img: "https://www.uptodd.com/images/newWebsite/awards/manasmita.webp",
-      title: "Manasmita - Kalams World Record",
-      description: "500+ Different objects in 5 minutes",
-    },
-    {
-      id: 7,
-      img: "https://www.uptodd.com/images/newWebsite/awards/tejas.webp",
-      title: "Tejas - New York Times World Record",
-      description:
-        " UpTodd's Little Genius spoke 800 different words of variety of things within 29 Minutes",
-    },
-  ];
-  const boardMembers = [
-    {
-      img: "https://www.uptodd.com/images/newWebsite/board/abhishek-singh.png",
-      name: "Abhishek Singh",
-      position: "Co-Founder & CEO",
-      description:
-        "B.Tech(Hons) IIT Kharagpur, 30under30 Brainfeed | Rex Karmaveer Chakra, iCongo & United Nations",
-    },
-    {
-      img: "https://www.uptodd.com/images/newWebsite/board/devesh-kaushik.png",
-      name: "Devesh Kaushik",
-      position: "Co-Founder & CTO",
-      description: "B.Tech(Hons) IIT Kharagpur",
-    },
-    {
-      img: "https://www.uptodd.com/images/newWebsite/board/dr-richa-singh.png",
-      name: "Richa Singh",
-      position: "Co-Founder & CPO",
-      description:
-        "Biomedical PhD, IIT BHU, Sangeet Prabhakar, Music, Neural Music Researcher",
-    },
-    {
-      img: "https://www.uptodd.com/images/newWebsite/board/dr-jaideep.png",
-      name: "Dr.Jaideep Sharma",
-      position: "Chief Expert & Advisor",
-      description: "AIIMS, 1981 Batch India's 2nd Longest Coma Survivor",
-    },
-    {
-      img: "https://www.uptodd.com/images/newWebsite/board/arjun-malhotra.jpg",
-      name: "Arjun Malhotra",
-      position: "Advisor",
-      description:
-        "Co-Founder HCL Group, Headstrong, Techspan & others | Albert Einstein Tech. Awardee",
-    },
-    {
-      img: "https://www.uptodd.com/images/newWebsite/board/saurabh-garg.jpeg",
-      name: "Saurabh Garg",
-      position: "Advisor",
-      description:
-        "Co-Founder, Nobroker & Four Fountains Spa | B.Tech IIT Bombay & MBA, IIM Ahmedabad ",
-    },
-  ];
+  const [clickedCardId, setClickedCardId] = useState(pillarsList[0].id);
+
+  const [faqProgramId, setFaqProgramId] = useState(FaqProgram[0].id);
+  const [faqBabyKit, setFaqBabyKitId] = useState(FaqBabyKit[0].id);
+  const [enrollment, setFaqEnrollment] = useState(Enrollment[0].id);
+  const content = {
+    FaqProgram: (
+      <>
+        {FaqProgram.map((faqEle) => (
+          <div
+            key={faqEle.id}
+            onClick={() => handleCardClickForFaq(faqEle.id)}
+            className={`faq-card ${
+              faqProgramId === faqEle.id ? "active" : ""
+            }`}>
+            <h3>{faqEle.qus}</h3>
+            <p>{faqEle.ans}</p>
+            <p>{faqEle.ans1}</p>
+            <p>{faqEle.ans2}</p>
+          </div>
+        ))}
+      </>
+    ),
+    FaqBabyKit: (
+      <>
+        {FaqBabyKit.map((faqEle) => (
+          <div
+            key={faqEle.id}
+            onClick={() => handleCardClickForFaq(faqEle.id)}
+            className={`faq-card ${faqBabyKit === faqEle.id ? "active" : ""}`}>
+            <h3>{faqEle.qus}</h3>
+            <p>{faqEle.ans}</p>
+            <p>{faqEle.ans1}</p>
+            <p>{faqEle.ans2}</p>
+          </div>
+        ))}
+      </>
+    ),
+    Enrollment: (
+      <>
+        {Enrollment.map((faqEle) => (
+          <div
+            key={faqEle.id}
+            onClick={() => handleCardClickForFaq(faqEle.id)}
+            className={`faq-card ${enrollment === faqEle.id ? "active" : ""}`}>
+            <h3>{faqEle.qus}</h3>
+            <p>{faqEle.ans}</p>
+            <p>{faqEle.ans1}</p>
+            <p>{faqEle.ans2}</p>
+            <p>{faqEle.ans3}</p>
+            <p>{faqEle.ans4}</p>
+            <p>{faqEle.ans5}</p>
+            <p>{faqEle.ans6}</p>
+            <p>{faqEle.ans7}</p>
+          </div>
+        ))}
+      </>
+    ),
+  };
+
   return (
     <>
       <section className="Home-page">
@@ -1246,8 +1119,8 @@ const Home = ({ bookingText, explore, start, enroll }) => {
           />
         </div>
 
-        <div class="theory-research">
-          <div class="theory-head">
+        <div className="theory-research">
+          <div className="theory-head">
             <h4>Enriched with top research by</h4>
           </div>
           <img
@@ -1258,11 +1131,11 @@ const Home = ({ bookingText, explore, start, enroll }) => {
           />
           <p>and 50+ other top global experts</p>
         </div>
-        <div class="theory-research-mobile">
-          <div class="theory-research-mobile-head">
+        <div className="theory-research-mobile">
+          <div className="theory-research-mobile-head">
             <h4>Enriched with top research by</h4>
           </div>
-          <div class="theory-research-mobile-list">
+          <div className="theory-research-mobile-list">
             <div>
               <img
                 src="https://www.uptodd.com/images/newWebsite/researchers/glenn-doman.webp"
@@ -1347,13 +1220,13 @@ const Home = ({ bookingText, explore, start, enroll }) => {
           </div>
         </div>
       </section>
-      <section class="our-mentors" id="our-mentors">
+      <section className="our-mentors" id="our-mentors">
         <h1>
           Meet our Mentors &amp; Curators |
           <span>100+ Curators R&amp;D Team</span>
         </h1>
-        <div class="mentors-list">
-          <div class="mentor-card">
+        <div className="mentors-list">
+          <div classname="mentor-card">
             <img
               src="https://www.uptodd.com/images/newWebsite/professors/krishna_vedula.webp"
               onerror="this.onerror=null; this.src='/images/newWebsite/professors/krishna_vedula.png'"
@@ -1366,7 +1239,7 @@ const Home = ({ bookingText, explore, start, enroll }) => {
               <span>Professor, MIT, United States</span>
             </h3>
           </div>
-          <div class="mentor-card">
+          <div classname="mentor-card">
             <img
               src="https://www.uptodd.com/images/newWebsite/professors/jaideep_sharma.webp"
               onerror="this.onerror=null; this.src='/images/newWebsite/professors/jaideep_sharma.png'"
@@ -1379,7 +1252,7 @@ const Home = ({ bookingText, explore, start, enroll }) => {
               <span>MBBS &amp; MD, AIIMS, New Delhi</span>
             </h3>
           </div>
-          <div class="mentor-card">
+          <div className="mentor-card">
             <img
               src="https://www.uptodd.com/images/newWebsite/professors/sudhanshu.webp"
               onerror="this.onerror=null; this.src='/images/newWebsite/professors/sudhanshu.png'"
@@ -1392,7 +1265,7 @@ const Home = ({ bookingText, explore, start, enroll }) => {
               <span>MD, DSMA CMC Vellore</span>
             </h3>
           </div>
-          <div class="mentor-card">
+          <div className="mentor-card">
             <img
               src="https://www.uptodd.com/images/newWebsite/professors/manoj_mondal.webp"
               onerror="this.onerror=null; this.src='/images/newWebsite/professors/manoj_mondal.png'"
@@ -1405,7 +1278,7 @@ const Home = ({ bookingText, explore, start, enroll }) => {
               <span>Professor, IIT Kharagpur</span>
             </h3>
           </div>
-          <div class="mentor-card">
+          <div className="mentor-card">
             <img
               src="https://www.uptodd.com/images/newWebsite/professors/PK_Mishra.webp"
               onerror="this.onerror=null; this.src='/images/newWebsite/professors/PK_Mishra.png'"
@@ -1420,7 +1293,7 @@ const Home = ({ bookingText, explore, start, enroll }) => {
           </div>
         </div>
         <h1>UpTodd™ has been Featured In</h1>
-        <div class="featured-in">
+        <div className="featured-in">
           <img
             src="https://www.uptodd.com/images/newWebsite/featured-in.webp"
             onerror="this.onerror=null; this.src='/images/newWebsite/featured-in.png'"
@@ -1429,7 +1302,7 @@ const Home = ({ bookingText, explore, start, enroll }) => {
           />
         </div>
       </section>
-      <section class="board-container happy-parents">
+      <section className="board-container happy-parents">
         <h1>Meet our Other Board Members</h1>
         <h5>On a mission to empower 10 Million+ families globally by 2026</h5>
         <div class="board-wrapper">
@@ -1440,8 +1313,8 @@ const Home = ({ bookingText, explore, start, enroll }) => {
             alt="Previous Board Member"
           />
           <div class="board-grid">
-            {boardMembers.map((ele) => (
-              <div class="board-card">
+            {boardMembers.map((ele, index) => (
+              <div key={index} class="board-card">
                 <img src={ele.img} alt="" />
                 <h3>{ele.name} </h3>
                 <span>{ele.position} </span>
@@ -1455,6 +1328,28 @@ const Home = ({ bookingText, explore, start, enroll }) => {
             loading="lazy"
             alt="Next Board Member"
           />
+        </div>
+      </section>
+      <section class="faqs">
+        <h1>FAQs</h1>
+        <div class="faq-list">
+          <div class="faq-category-list">
+            <div>
+              <Button
+                text={program}
+                onClick={() => setActiveContent("FaqProgram")}
+              />
+              <Button
+                text={babyKit}
+                onClick={() => setActiveContent("FaqBabyKit")}></Button>
+              <Button
+                text={enrollmentBtn}
+                onClick={() => setActiveContent("Enrollment")}>
+                Enrollment
+              </Button>
+            </div>
+          </div>
+          <div style={{ marginTop: "20px" }}>{content[activeContent]}</div>
         </div>
       </section>
     </>
