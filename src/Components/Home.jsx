@@ -10,6 +10,7 @@ import { cards } from "../Lists/card";
 import { pillarsList } from "../Lists/pillarsList";
 import { babyAwardList } from "../Lists/babyAwardList";
 import { boardMembers } from "../Lists/boardMembers";
+import Footer from "./Footer";
 
 const Home = ({
   bookingText,
@@ -427,9 +428,7 @@ const Home = ({
             Want to know more about program
             <span onClick={openModal}>see here</span>
           </p>
-          <Modal show={showModal} onClose={closeModal} title="My Modal">
-            <p>This is the content inside the modal.</p>
-          </Modal>
+          <Modal show={showModal} onClose={closeModal}></Modal>
         </div>
       </section>
       <section className="developmental-kit">
@@ -1352,6 +1351,7 @@ const Home = ({
           <div style={{ marginTop: "20px" }}>{content[activeContent]}</div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

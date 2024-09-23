@@ -438,11 +438,10 @@
 }
 .product-and-cost-card {
   padding: 20px 15px;
-
   border: 2px solid #5a40c4;
   border-radius: 15px;
   color: #002863;
-  height: 350px;
+  height: 400px;
   text-align: center;
   width: 460px;
 }
@@ -484,14 +483,18 @@
   font-weight: 600;
 }
 .enroll-btn {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 .program-test {
   margin-top: 30px;
   width: 100%;
   text-align: center;
 }
-
+.program-test p span {
+  margin-left: 10px;
+  color: #ff3f4e;
+  cursor: pointer;
+}
 .developmental-kit {
   position: relative;
   display: flex;
@@ -1090,4 +1093,21 @@ p {
   opacity: 1;
   padding: 0px 10px;
   display: flex;
+}
+.footer {
+  width: 100%;
+  padding: 53px 80px 31px;
+  background: #5a40c4;
+}
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-card {
+  text-align: left;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  unicode-bidi: isolate;
 }
