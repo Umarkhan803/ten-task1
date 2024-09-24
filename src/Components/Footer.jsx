@@ -9,7 +9,6 @@ const Footer = () => {
             <div className="nav-logo">
               <img
                 src="https://www.uptodd.com/images/newWebsite/footer-logo.webp"
-                onError="this.onError=null; this.src='/images/newWebsite/footer-logo.png'"
                 alt="UpTodd - Nurturing Baby Genius"
               />
             </div>
@@ -129,7 +128,6 @@ const Footer = () => {
                 target="_blank">
                 <img
                   src="https://www.uptodd.com/images/newWebsite/googleplay.webp"
-                  onError="this.onError=null; this.src='/images/newWebsite/googleplay.png'"
                   alt="UpTodd - Nurturing Baby Genius"
                 />
               </a>
@@ -139,7 +137,6 @@ const Footer = () => {
                 target="_blank">
                 <img
                   src="https://www.uptodd.com/images/newWebsite/appstore.webp"
-                  onError="this.onError=null; this.src='/images/newWebsite/appstore.png'"
                   alt="UpTodd - Nurturing Baby Genius"
                 />
               </a>

@@ -1115,6 +1115,40 @@ p {
 }
 .faq-card h3 {
   color: #002863;
+}
+.faq-card p {
+  color: #002863;
+}
+.faqBtn {
+  width: 176px;
+  height: 48px;
+  border-radius: 8px;
+  background: #ff5766;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  margin-left: 50px;
+  line-height: 26px;
+  letter-spacing: -0.64px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+.faqBtn:hover {
+  background-color: #ff818c;
+  box-shadow: 0px 15px 20px #ff4252;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.faqBtn:active {
+  transform: translateY(-1px);
+}
+
+.faq-card h3 {
+  color: #002863;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;

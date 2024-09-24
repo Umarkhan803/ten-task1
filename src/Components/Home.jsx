@@ -28,7 +28,8 @@ const Home = ({
   const boardMembersRef = useRef(null);
   const awaredBabyRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
-  const [activeContent, setActiveContent] = useState("FaqProgram");
+
+  const [activeContent, setActiveContent] = useState("enrollment");
   const [isHovered, setIsHovered] = useState(false);
   const openModal = () => {
     setShowModal(true);
@@ -145,8 +146,9 @@ const Home = ({
   const [faqProgramId, setFaqProgramId] = useState(FaqProgram[0].id);
   const [faqBabyKit, setFaqBabyKitId] = useState(FaqBabyKit[0].id);
   const [enrollment, setFaqEnrollment] = useState(Enrollment[0].id);
+
   const content = {
-    FaqProgram: (
+    faqProgram: (
       <>
         {FaqProgram.map((faqEle) => (
           <div
@@ -159,11 +161,12 @@ const Home = ({
             <p>{faqEle.ans}</p>
             <p>{faqEle.ans1}</p>
             <p>{faqEle.ans2}</p>
+            {console.log("program")}
           </div>
         ))}
       </>
     ),
-    FaqBabyKit: (
+    faqBabyKit: (
       <>
         {FaqBabyKit.map((faqEle) => (
           <div
@@ -174,11 +177,12 @@ const Home = ({
             <p>{faqEle.ans}</p>
             <p>{faqEle.ans1}</p>
             <p>{faqEle.ans2}</p>
+            {console.log("babykit")}
           </div>
         ))}
       </>
     ),
-    Enrollment: (
+    enrollment: (
       <>
         {Enrollment.map((faqEle) => (
           <div
@@ -636,9 +640,7 @@ const Home = ({
           />
         </div>
         <div className="happy-parents-button">
-          <button
-            id="homeScreenHappyParentsSection"
-            onClick="showBookDemoPopup('happyParents')">
+          <button id="homeScreenHappyParentsSection">
             Fuel Your Child's Development!
           </button>
         </div>
@@ -692,7 +694,6 @@ const Home = ({
           </div>
           <img
             src="https://www.uptodd.com/images/newWebsite/research-insti.webp"
-            onError="this.onError=null; this.src='/images/newWebsite/research-insti.png'"
             loading="lazy"
             alt="IIT,IIM,MIT,Harvard Research Institutes"
           />
@@ -704,7 +705,6 @@ const Home = ({
           </div>
           <img
             src="https://www.uptodd.com/images/newWebsite/research-insti-mobile.webp"
-            onError="this.onError=null; this.src='/images/newWebsite/research-insti-mobile.png'"
             loading="lazy"
             alt="IIT,IIM,MIT,Harvard Research Institutes"
           />
@@ -716,7 +716,6 @@ const Home = ({
           </div>
           <img
             src="https://www.uptodd.com/images/newWebsite/researchers/all_researchers.webp"
-            onError="this.onError=null; this.src='/images/newWebsite/researchers/all_researchers.png'"
             loading="lazy"
             alt="Research Backed Personalised Program for Baby Development"
           />
@@ -730,7 +729,6 @@ const Home = ({
             <div>
               <img
                 src="https://www.uptodd.com/images/newWebsite/researchers/glenn-doman.webp"
-                onError="this.onError=null; this.src='/images/newWebsite/researchers/glenn-doman.png'"
                 loading="lazy"
                 alt="glenn-doman baby development expert"
               />
@@ -739,7 +737,6 @@ const Home = ({
             <div>
               <img
                 src="https://www.uptodd.com/images/newWebsite/researchers/maria-montessori.webp"
-                onError="this.onError=null; this.src='/images/newWebsite/researchers/maria-montessori.png'"
                 loading="lazy"
                 alt="maria-montessori baby development expert"
               />
@@ -748,7 +745,6 @@ const Home = ({
             <div>
               <img
                 src="https://www.uptodd.com/images/newWebsite/researchers/rudolf-steiner.webp"
-                onError="this.onError=null; this.src='/images/newWebsite/researchers/rudolf-steiner.png'"
                 loading="lazy"
                 alt="rudolf-steiner baby development expert"
               />
@@ -757,7 +753,6 @@ const Home = ({
             <div>
               <img
                 src="https://www.uptodd.com/images/newWebsite/researchers/bf-skinner.webp"
-                onError="this.onError=null; this.src='/images/newWebsite/researchers/bf-skinner.png'"
                 loading="lazy"
                 alt="bf-skinner baby development expert"
               />
@@ -766,7 +761,6 @@ const Home = ({
             <div>
               <img
                 src="https://www.uptodd.com/images/newWebsite/researchers/loris-malaguzzi.webp"
-                onError="this.onError=null; this.src='/images/newWebsite/researchers/loris-malaguzzi.png'"
                 loading="lazy"
                 alt="loris-malaguzzi baby development expert"
               />
@@ -775,7 +769,6 @@ const Home = ({
             <div>
               <img
                 src="https://www.uptodd.com/images/newWebsite/researchers/howard-gardner.webp"
-                onError="this.onError=null; this.src='/images/newWebsite/researchers/howard-gardner.png'"
                 loading="lazy"
                 alt="howard-gardner baby development expert"
               />
@@ -784,7 +777,6 @@ const Home = ({
             <div>
               <img
                 src="https://www.uptodd.com/images/newWebsite/researchers/diana-baumrind.webp"
-                onError="this.onError=null; this.src='/images/newWebsite/researchers/diana-baumrind.png'"
                 loading="lazy"
                 alt="diana-baumrind baby development expert"
               />
@@ -793,7 +785,6 @@ const Home = ({
             <div>
               <img
                 src="https://www.uptodd.com/images/newWebsite/researchers/swami-vivekanand.webp"
-                onError="this.onError=null; this.src='/images/newWebsite/researchers/swami-vivekanand.png'"
                 loading="lazy"
                 alt="swami-vivekanand"
               />
@@ -802,7 +793,6 @@ const Home = ({
             <div>
               <img
                 src="https://www.uptodd.com/images/newWebsite/researchers/jean-piaget.webp"
-                onError="this.onError=null; this.src='/images/newWebsite/researchers/jean-piaget.png'"
                 loading="lazy"
                 alt="jean-piaget baby development expert"
               />
@@ -820,7 +810,6 @@ const Home = ({
           <div className="mentor-card">
             <img
               src="https://www.uptodd.com/images/newWebsite/professors/krishna_vedula.webp"
-              onError="this.onError=null; this.src='/images/newWebsite/professors/krishna_vedula.png'"
               loading="lazy"
               alt="Uptodd mentor Prof.Krishna Vedula MIT"
             />
@@ -833,7 +822,6 @@ const Home = ({
           <div className="mentor-card">
             <img
               src="https://www.uptodd.com/images/newWebsite/professors/jaideep_sharma.webp"
-              onError="this.onError=null; this.src='/images/newWebsite/professors/jaideep_sharma.png'"
               loading="lazy"
               alt="Uptodd mentor Dr.Jaideep Sharma AIIMS"
             />
@@ -846,7 +834,6 @@ const Home = ({
           <div className="mentor-card">
             <img
               src="https://www.uptodd.com/images/newWebsite/professors/sudhanshu.webp"
-              onError="this.onError=null; this.src='/images/newWebsite/professors/sudhanshu.png'"
               loading="lazy"
               alt="Uptodd mentor Dr.Sudhanshu Singh"
             />
@@ -859,7 +846,6 @@ const Home = ({
           <div className="mentor-card">
             <img
               src="https://www.uptodd.com/images/newWebsite/professors/manoj_mondal.webp"
-              onError="this.onError=null; this.src='/images/newWebsite/professors/manoj_mondal.png'"
               loading="lazy"
               alt="Uptodd mentor Prof.Manoj Mondal IIT KGP"
             />
@@ -872,7 +858,6 @@ const Home = ({
           <div className="mentor-card">
             <img
               src="https://www.uptodd.com/images/newWebsite/professors/PK_Mishra.webp"
-              onError="this.onError=null; this.src='/images/newWebsite/professors/PK_Mishra.png'"
               loading="lazy"
               alt="Uptodd mentor PK Mishra IIT BHU"
             />
@@ -887,7 +872,6 @@ const Home = ({
         <div className="featured-in">
           <img
             src="https://www.uptodd.com/images/newWebsite/featured-in.webp"
-            onError="this.onError=null; this.src='/images/newWebsite/featured-in.png'"
             loading="lazy"
             alt="Media Houses Featuring UpTodd"
           />
@@ -928,21 +912,24 @@ const Home = ({
         <div className="faq-list">
           <div className="faq-category-list">
             <div>
-              <Button
-                text={program}
-                onClick={() => setActiveContent("FaqProgram")}
-              />
-              <Button
-                text={babyKit}
-                onClick={() => setActiveContent("FaqBabyKit")}></Button>
-              <Button
-                text={enrollmentBtn}
-                onClick={() => setActiveContent("Enrollment")}>
-                Enrollment
-              </Button>
+              <button
+                className="faqBtn"
+                onClick={() => setActiveContent("faqProgram")}>
+                Program
+              </button>
+              <button
+                className="faqBtn"
+                onClick={() => setActiveContent("faqBabyKit")}>
+                BabyKit
+              </button>
+              <button
+                className="faqBtn"
+                onClick={() => setActiveContent("enrollment")}>
+                enrollment
+              </button>
             </div>
           </div>
-          <div style={{ marginTop: "20px" }}>{content[activeContent]}</div>
+          <div>{content[activeContent]}</div>
         </div>
       </section>
       <Footer />
