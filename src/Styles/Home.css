@@ -703,10 +703,21 @@
   color: #fff;
   font-size: 20px;
   font-style: normal;
+  transition: 0.5s;
   font-weight: 500;
   line-height: 26px;
   letter-spacing: -0.8px;
   border: none;
+}
+.happy-parents-button button:hover {
+  background-color: #ff818c;
+  box-shadow: 0px 15px 20px #ff4252;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.happy-parents-button button:active {
+  transform: translateY(-1px);
 }
 .doctor-review {
   width: 100%;
@@ -1119,6 +1130,7 @@ p {
 .faq-card p {
   color: #002863;
 }
+
 .faqBtn {
   width: 176px;
   height: 48px;
@@ -1130,7 +1142,7 @@ p {
   font-weight: 500;
   margin-left: 50px;
   line-height: 26px;
-  letter-spacing: -0.64px;
+
   border: none;
   cursor: pointer;
   position: relative;

@@ -14,15 +14,7 @@ import { happyParent } from "../Lists/happyParent.js";
 import { doctorReviews } from "../Lists/doctorReviews.js";
 import Footer from "./Footer";
 
-const Home = ({
-  bookingText,
-  explore,
-  start,
-  enroll,
-  enrollmentBtn,
-  babyKit,
-  program,
-}) => {
+const Home = ({ bookingText, explore, start, enroll }) => {
   const carouselRef = useRef(null);
   const happyParentRef = useRef(null);
   const boardMembersRef = useRef(null);
