@@ -7,32 +7,54 @@
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
-  z-index: 1;
   align-items: center;
+  overflow-y: scroll;
+  z-index: 1;
 }
 
 .modal-container {
   background-color: #fff;
+  margin-top: 500px;
   padding: 20px;
   border-radius: 10px;
-  max-width: 500px;
+  max-width: 90%;
   width: 100%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
-
-.modal-header {
+.clone-btn-container {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
 }
 
+.modal-header h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
 .close-btn {
   background-color: transparent;
   border: none;
   font-size: 24px;
   cursor: pointer;
 }
-
+.modal-content {
+  color: #002863;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: auto auto;
+  grid-gap: 23px 4%;
+}
+.modal-card {
+  border-radius: 12px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  padding: 30px;
+  display: flex;
+}
+.modal-card h2 {
+  font-weight: 500;
+}
 .modal-body {
   margin-top: 10px;
 }

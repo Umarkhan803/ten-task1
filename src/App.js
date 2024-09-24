@@ -8,6 +8,7 @@ import Blog from "./Components/Blog";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 function App() {
   const navText = "Start for INR 499";
   const bookingText = "Book a Demo Slot";

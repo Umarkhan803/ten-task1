@@ -5,7 +5,7 @@
   box-sizing: border-box;
   font-family: "Poppins", system-ui;
 }
-ul {
+ul li {
   list-style-type: none;
 }
 li {

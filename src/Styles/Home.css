@@ -1,3 +1,6 @@
+.home-section {
+  z-index: 4;
+}
 .Home-page {
   width: 100%;
   height: 100vh;
@@ -156,8 +159,9 @@
   align-items: center;
 }
 .building {
-  width: 48%;
+  width: 100%;
   text-align: center;
+  overflow: hidden;
 }
 .building iframe {
   width: 480px;
@@ -218,21 +222,21 @@
   align-items: center;
   position: relative;
   width: 100%;
-  overflow: hidden; /* Hide overflowing content */
+  overflow: hidden;
 }
 
 .carousel {
   display: flex;
   scroll-behavior: smooth;
-  overflow-x: auto; /* Horizontal scrolling */
-  gap: 20px; /* Space between cards */
+  overflow-x: auto;
+  gap: 20px;
   scroll-snap-type: x mandatory;
   width: 80%;
   margin: 0 auto;
 }
 
 .carousel::-webkit-scrollbar {
-  display: none; /* Hide scrollbar */
+  display: none;
 }
 
 .carousel-button {
@@ -242,8 +246,8 @@
 }
 
 .carousel-card {
-  min-width: 300px; /* Ensure each card has a minimum width */
-  flex: 0 0 auto; /* Prevent shrinking */
+  min-width: 300px;
+  flex: 0 0 auto;
   background: white;
   color: black;
   border-radius: 10px;
@@ -576,6 +580,18 @@
   box-shadow: 0 4px 12px 0 rgb(19 15 46 / 0.06);
   margin-bottom: 20px;
 }
+.baby-award-card {
+  min-width: 350px;
+  margin-left: 20px;
+  border-radius: 12px;
+  color: #002863;
+  background: #fffbfb;
+  box-shadow: 0 4px 12px 0 rgb(19 15 46 / 0.06);
+  margin-bottom: 20px;
+}
+.baby-award-card img {
+  width: 100%;
+}
 .carousel-card img {
   width: 100%;
 }
@@ -632,13 +648,14 @@
   margin-top: 17px;
   width: 81%;
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 .happy-parent-card:first-of-type {
   margin-left: 0;
 }
 
-.happy-parent-card {
+.happy-parents-card {
+  padding: 15px;
   width: 360px;
   border-radius: 12px;
   border: 0 solid var(--Primary-Font, #002863);
@@ -665,7 +682,6 @@
 }
 .happy-parents-slider-prev {
   left: 7.5%;
-  display: none;
 }
 .happy-parents-slider-next,
 .happy-parents-slider-prev {
@@ -720,13 +736,33 @@
   margin-top: 41px;
   width: 100%;
   display: flex;
-  overflow-x: scroll;
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap;
 }
 .doctor-review-card:first-of-type {
   margin-left: 9%;
 }
+.doctor-review-container {
+  display: flex;
+  padding-left: 10%; /* Start the text outside of view */
+  animation: marquee 20s linear infinite;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+.paused {
+  animation-play-state: paused; /* Pause animation when hovered */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .doctor-review-card {
   min-width: 260px;
+  height: 470px;
   border-radius: 12px;
   background: #f5f5f5;
   margin-left: 21px;
@@ -743,7 +779,7 @@
   position: absolute;
   width: 100%;
   background: #5a40c4;
-  padding: 12px 22px;
+  padding: 10px 22px;
   bottom: -10px;
 }
 .doctor-review-image-part div h3 {
@@ -991,7 +1027,8 @@ p {
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
-  overflow-x: scroll;
+
+  overflow: hidden;
   gap: 15px;
 }
 .board-card {
