@@ -294,7 +294,7 @@ const Home = ({ bookingText, explore, start, enroll }) => {
         </div>
       </section>
       <section>
-        <div className="genius-section">
+        <section className="genius-section">
           <div className="genius-header">
             <h1>Inside Your Baby's Genius - Building Baby Brain</h1>
             <h2>Every Baby is born with infinite Potential</h2>
@@ -337,7 +337,7 @@ const Home = ({ bookingText, explore, start, enroll }) => {
           <div>
             <Button text={explore} />
           </div>
-        </div>
+        </section>
       </section>
       <section className="genius-babies">
         <div className="carousel-container">
@@ -443,8 +443,10 @@ const Home = ({ bookingText, explore, start, enroll }) => {
         </div>
       </section>
       <section className="start-now-banner">
-        Stop overspending on generic and hamful toys, filled with Chlorinated
-        Paraffin-{">"} <br /> Toxic for your baby brain growth
+        <p>
+          Stop overspending on generic and hamful toys, filled with Chlorinated
+          Paraffin-{">"} <br /> Toxic for your baby brain growth
+        </p>
         <div>
           <Button text={start} />
         </div>

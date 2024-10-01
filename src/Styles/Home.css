@@ -1142,7 +1142,6 @@ p {
   font-weight: 500;
   margin-left: 50px;
   line-height: 26px;
-
   border: none;
   cursor: pointer;
   position: relative;
@@ -1193,4 +1192,178 @@ li {
   display: list-item;
   text-align: -webkit-match-parent;
   unicode-bidi: isolate;
+}
+@media (max-width: 850px) {
+  .Home-page {
+    display: flex;
+  }
+  .banner-text h1 {
+    font-size: 35px;
+    line-height: 40px;
+    letter-spacing: -1.12px;
+  }
+  .banner-text h2 {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.4px;
+  }
+  .banner-text p {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+  }
+  .banner-text ul {
+    margin-top: 0;
+    list-style: none;
+  }
+
+  .banner-image img {
+    width: 300px;
+  }
+  .Possibilities-container {
+    height: 100%;
+    display: flex;
+  }
+  .Possibilities-image img {
+    width: 250px;
+  }
+  .Possibilities-card {
+    margin: 80px 0;
+    width: 100%;
+  }
+  .card-text h2 {
+    font-size: 15px;
+  }
+  .card-text p {
+    font-size: 12px;
+  }
+  .Possibilities-heading h1 {
+    font-size: 1.8rem;
+  }
+  .Possibilities-heading p {
+    font-size: 18px;
+  }
+  .solution-heading h1 {
+    font-size: 1.8rem;
+  }
+  .solution-image img {
+    width: 400px;
+  }
+  .genius-header h1 {
+    font-size: 1.8rem;
+  }
+  .genius-header h2 {
+    font-size: 1.2rem;
+  }
+  .genius-container {
+    padding: 44px 5% 75px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .genius-text {
+    font-size: 15px;
+    padding: 0;
+  }
+  .genius-text li span {
+    font-size: 25px;
+  }
+  .building {
+    padding: 0 10px;
+  }
+  .building iframe {
+    width: 450px;
+  }
+  .carousel-header h1 {
+    line-height: 50px;
+    font-size: 1.8rem;
+  }
+  .development-head h1 {
+    font-size: 2.5rem;
+  }
+  .development-head h2 {
+    font-size: 2rem;
+  }
+  .development-head p {
+    font-size: 15px;
+  }
+  .development-container {
+    margin-top: 100px;
+  }
+  .development-card {
+    border: 1px solid #002863;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 400px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.5s;
+  }
+  .development-image img {
+    width: 300px;
+  }
+  .developmental-pillars-footer {
+    font-size: 15px;
+  }
+  .start-now-banner {
+    padding: 0 50px;
+  }
+  .start-now-banner p {
+    font-size: 15px;
+  }
+  .product-and-cost-header h1 {
+    font-size: 2.5rem;
+  }
+  .product-and-cost-header h2 {
+    font-size: 2rem;
+  }
+  .product-and-cost-header h2 {
+    font-size: 1rem;
+  }
+  .product-and-cost-list {
+    text-align: center;
+    height: 200px;
+  }
+  .product-and-cost-list li span {
+    font-size: 18px;
+  }
+  .product-and-cost-container-card {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .product-and-cost-card {
+    padding: 20px 15px;
+    border: 2px solid #5a40c4;
+    border-radius: 15px;
+    color: #002863;
+    height: 400px;
+    text-align: center;
+    width: 350px;
+  }
+  .product-and-cost-card h1 {
+    font-size: 20px;
+  }
+  .kit-intro {
+    width: 363px;
+    display: flex;
+    color: #002863;
+    padding: 24px;
+    border-radius: 12px;
+    background: linear-gradient(
+      90deg,
+      rgb(255 63 78 / 0.11) 0%,
+      rgb(90 64 196 / 0.11) 100%
+    );
+    justify-content: space-between;
+  }
+  .kit-intro h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .awared-babies h1 {
+    font-size: 2.2rem;
+  }
+  .awared-babies h1 span {
+    font-size: 2rem;
+  }
 }

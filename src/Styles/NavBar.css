@@ -11,8 +11,8 @@
   background-color: #fff;
 }
 
-.logo {
-  font-size: 2rem;
+.logo img {
+  width: 160px;
   font-weight: 500;
 }
 .navLinks {
@@ -24,7 +24,9 @@
   list-style-type: none;
   margin-left: 20px;
 }
-
+.menu {
+  display: none;
+}
 .Home-button {
   width: 176px;
   height: 48px;
@@ -52,4 +54,19 @@
 
 .Home-button:active {
   transform: translateY(-1px);
+}
+@media (max-width: 845px) {
+  .navBar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+  }
+  .menu {
+    display: block;
+    font-size: 25px;
+  }
+  .navLink {
+    display: none;
+  }
 }

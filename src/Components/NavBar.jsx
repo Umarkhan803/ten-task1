@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
 const NavBar = ({ text, enroll }) => {
   const location = useLocation(); // Get the current route path
@@ -19,7 +20,17 @@ const NavBar = ({ text, enroll }) => {
   return (
     <>
       <nav className="navBar">
-        <h1 className="logo">LOGO .</h1>
+        <div className="menu">
+          <GiHamburgerMenu />
+        </div>
+        <div className="logo">
+          <img
+            src="https://www.uptodd.com/images/newWebsite/logo-image.webp"
+            alt="Company Logo"
+            style={{ height: "50px" }}
+            onError={(e) => (e.target.src = "fallback-image-url")}
+          />
+        </div>
         <ul className="navLinks">
           {currentPage === "premium_program" ? (
             <>
