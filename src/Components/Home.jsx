@@ -817,7 +817,7 @@ const Home = ({ bookingText, explore, start, enroll }) => {
             <img
               src="https://www.uptodd.com/images/newWebsite/professors/jaideep_sharma.webp"
               loading="lazy"
-              alt="Uptodd mentor Dr.Jaideep Sharma AIIMS"
+              alt="Uptodd   mentor Dr.Jaideep Sharma AIIMS"
             />
             <h3>
               Dr. Jaideep Sharma

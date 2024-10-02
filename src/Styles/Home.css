@@ -1366,4 +1366,49 @@ li {
   .awared-babies h1 span {
     font-size: 2rem;
   }
+  .happy-parents h1 {
+    font-size: 2rem;
+  }
+  .happy-parents h5 {
+    font-size: 1.5rem;
+  }
+  .doctor-review h1 {
+    font-size: 2rem;
+  }
+  .doctor-review h5 {
+    font-size: 1.2rem;
+  }
+  .research-backed h1,
+  .research-backed h1 span {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  .research-backed h5 {
+    font-size: 20px;
+  }
+  .insti-head h4 {
+    font-size: 20px;
+  }
+  .insti-head,
+  .theory-head {
+    border-radius: 33px;
+    background: #5a40c4;
+    position: absolute;
+    top: -30px;
+    left: 20%;
+    padding: 0 3%;
+  }
+  .our-mentors h1,
+  .our-mentors h1 span {
+    font-size: 25px;
+  }
+  .mentors-list {
+    overflow-x: scroll;
+  }
+  .board-container h1 {
+    font-size: 1.8rem;
+  }
+  .faqBtn {
+    margin-left: 10px;
+  }
 }
