@@ -288,13 +288,6 @@
   right: 100px;
 }
 
-@media only screen and (max-width: 600px) {
-  .carousel-card,
-  .carousel-card iframe {
-    min-width: 200px;
-    max-width: 250px;
-  }
-}
 /* ------------developmental-pillars */
 .developmental-pillars {
   padding: 50px;
@@ -1410,5 +1403,140 @@ li {
   }
   .faqBtn {
     margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Home-page {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  .bannerBtn {
+    margin-bottom: 20px;
+  }
+  .banner-image {
+    padding-top: 0;
+  }
+  .banner-image img {
+    width: 400px;
+  }
+  .banner-text {
+    text-align: center;
+  }
+  .banner-text h1 {
+    font-size: 2.5rem;
+  }
+  .Possibilities-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  .Possibilities-image img {
+    width: 500px;
+    height: 400px;
+    justify-content: space-evenly;
+  }
+  .Solution-page {
+    height: 100%;
+  }
+  .solution-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .genius-section {
+    height: 100%;
+  }
+  .genius-container {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-bottom: 0;
+    flex-direction: column-reverse;
+  }
+  .genius-babies {
+    height: 100%;
+  }
+
+  .carousel-card {
+    max-width: 250px;
+  }
+  .carousel-card,
+  .carousel-card iframe {
+    max-width: 250px;
+  }
+  .carousel-card h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .prev {
+    left: 40px;
+  }
+
+  .next {
+    right: 40px;
+  }
+  .developmental-pillars {
+    height: 100%;
+  }
+  .development-head h1 {
+    font-size: 2.2rem;
+  }
+  .development-head h2 {
+    font-size: 25px;
+  }
+  .development-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 45px;
+    justify-content: space-between;
+  }
+  .development-lest {
+    margin-top: 20px;
+  }
+  .development-card {
+    width: 500px;
+  }
+  .development-image img {
+    width: 400px;
+  }
+  .product-and-cost {
+    height: 100%;
+    height: 100%;
+  }
+  .product-and-cost-header {
+    padding: 20px;
+  }
+  .product-and-cost-header h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  .product-and-cost-list li {
+    margin-bottom: 10px;
+  }
+  .product-and-cost-container-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-and-cost-card {
+    width: 500px;
+    margin-bottom: 20px;
+  }
+  .developmental-kit {
+    width: 100%;
   }
 }
