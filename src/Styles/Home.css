@@ -312,7 +312,7 @@
   line-height: 20px;
 }
 .development-head p {
-  margin-top: 30px;
+  margin-todevelopment-cardp: 30px;
   font-size: 1.2rem;
 }
 .development-head p span {
@@ -1538,5 +1538,67 @@ li {
   }
   .developmental-kit {
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .developmental-kit .kit-intro {
+    margin-bottom: 50px;
+    width: 500px;
+  }
+  .awared-babies h1 {
+    font-size: 1.8rem;
+  }
+  .happy-parents h1 {
+    font-size: 2rem;
+  }
+  .happy-parents h1 span {
+    font-size: 1.5rem;
+  }
+  .happy-parents h5 {
+    font-size: 1.3rem;
+  }
+  .doctor-review h1 {
+    font-size: 1.8rem;
+  }
+  .doctor-review h5 {
+    font-size: 1.2rem;
+  }
+  .insti-research,
+  .theory-research {
+    display: block;
+    width: 81%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 12px;
+    border: 2px solid #5a40c4;
+    padding: 50px 38px 0;
+    position: relative;
+  }
+  .insti-head h4 {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .theory-head h4 {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .insti-head {
+    border-radius: 33px;
+    background: #5a40c4;
+    position: absolute;
+    top: -30px;
+    left: 12%;
+    padding: 0 3%;
+  }
+  .mentors-list {
+    overflow-x: scroll;
+  }
+  .faqBtn {
+    margin-left: 5px;
+    width: 150px;
+    height: 48px;
   }
 }
