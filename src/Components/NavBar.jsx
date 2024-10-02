@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5";
 import { Link, useLocation } from "react-router-dom";
 const NavBar = ({ text, enroll }) => {
   const location = useLocation(); // Get the current route path
   const [currentPage, setCurrentPage] = useState("home");
-
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
   useEffect(() => {
     if (location.pathname === "/") {
       setCurrentPage("home");
@@ -20,8 +24,8 @@ const NavBar = ({ text, enroll }) => {
   return (
     <>
       <nav className="navBar">
-        <div className="menu">
-          <GiHamburgerMenu />
+        <div className="menu" onClick={toggleSidebar}>
+          {isOpen ? <GiHamburgerMenu /> : <IoClose />}
         </div>
         <div className="logo">
           <img
@@ -31,26 +35,27 @@ const NavBar = ({ text, enroll }) => {
             onError={(e) => (e.target.src = "fallback-image-url")}
           />
         </div>
-        <ul className="navLinks">
+        <div className={`navLinks ${isOpen ? "open" : "close"}`}>
           {currentPage === "premium_program" ? (
             <>
-              <li className="navLink">
-                <Link to="/premium_program">Home</Link>
-              </li>
-              <li className="navLink">
-                <Link to="/program"> Program </Link>
-              </li>
-              <li className="navLink">
-                <Link to="/successPage">Success Story </Link>
-              </li>
-              <li className="navLink">
-                <Link to="/aboutus"> About</Link>
-              </li>
-              <Button text={enroll} />
+              <ul>
+                <li className="navLink">
+                  <Link to="/premium_program">Home</Link>
+                </li>
+                <li className="navLink">
+                  <Link to="/program"> Program </Link>
+                </li>
+                <li className="navLink">
+                  <Link to="/successPage">Success Story </Link>
+                </li>
+                <li className="navLink">
+                  <Link to="/aboutus"> About</Link>
+                </li>
+              </ul>
             </>
           ) : (
             <>
-              <>
+              <ul className={`navLinks ${isOpen ? "open" : "close"}`}>
                 <li className="navLink">
                   <Link to="/">Home</Link>
                 </li>
@@ -68,11 +73,17 @@ const NavBar = ({ text, enroll }) => {
                 <li className="navLink">
                   <Link to="/blog">Blog</Link>
                 </li>
-                <Button text={text} />
-              </>
+              </ul>
             </>
           )}
-        </ul>
+        </div>
+        <div>
+          {currentPage === "premium_program" ? (
+            <Button text={enroll} />
+          ) : (
+            <Button text={text} />
+          )}
+        </div>
       </nav>
     </>
   );

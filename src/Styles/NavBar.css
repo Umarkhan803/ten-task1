@@ -57,16 +57,46 @@
 }
 @media (max-width: 845px) {
   .navBar {
-    display: flex;
+    height: 82px;
+    width: 100%;
+    padding: 0 30px;
     position: sticky;
     top: 0;
     justify-content: space-between;
+    align-items: center;
+    display: flex;
+    z-index: 1;
   }
   .menu {
     display: block;
     font-size: 25px;
+    z-index: 1;
+  }
+  .navLinks {
+    transform: translateX(0);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 30px;
+    left: 0px;
+    background-color: #fff;
+    border-radius: 0 0 12px 12px;
+    padding: 20px;
+    width: 200px;
+    transition: transform 0.3s ease;
+  }
+
+  .navLinks.open {
+    transform: translateX(-100%);
+  }
+
+  .navLinks.closed {
+    transform: translateX(-100%);
   }
   .navLink {
-    display: none;
+    text-align: center;
+    margin: 7px;
   }
 }
