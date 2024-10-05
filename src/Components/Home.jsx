@@ -153,7 +153,6 @@ const Home = ({ bookingText, explore, start, enroll }) => {
             <p>{faqEle.ans}</p>
             <p>{faqEle.ans1}</p>
             <p>{faqEle.ans2}</p>
-            {console.log("program")}
           </div>
         ))}
       </>
@@ -169,7 +168,6 @@ const Home = ({ bookingText, explore, start, enroll }) => {
             <p>{faqEle.ans}</p>
             <p>{faqEle.ans1}</p>
             <p>{faqEle.ans2}</p>
-            {console.log("babykit")}
           </div>
         ))}
       </>
