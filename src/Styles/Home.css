@@ -932,6 +932,12 @@ p {
 .mentor-card:first-of-type {
   margin-left: 0;
 }
+.mentor-card-container {
+  display: flex;
+  padding-left: 10%; /* Start the text outside of view */
+  animation: marquee 20s linear infinite;
+  white-space: nowrap; /* Prevent text wrapping */
+}
 .mentor-card {
   border-radius: 12px;
   border: 1px solid #d9d9d9;
@@ -1600,5 +1606,11 @@ li {
     margin-left: 5px;
     width: 150px;
     height: 48px;
+  }
+  .mentor-card-container {
+    display: flex;
+    padding-left: 10%; /* Start the text outside of view */
+    animation: marquee 20s linear infinite;
+    white-space: nowrap; /* Prevent text wrapping */
   }
 }

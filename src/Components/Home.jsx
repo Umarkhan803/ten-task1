@@ -798,66 +798,71 @@ const Home = ({ bookingText, explore, start, enroll }) => {
           Meet our Mentors &amp; Curators |
           <span>100+ Curators R&amp;D Team</span>
         </h1>
-        <div className="mentors-list">
-          <div className="mentor-card">
-            <img
-              src="https://www.uptodd.com/images/newWebsite/professors/krishna_vedula.webp"
-              loading="lazy"
-              alt="Uptodd mentor Prof.Krishna Vedula MIT"
-            />
-            <h3>
-              Krishna Vedula
-              <br />
-              <span>Professor, MIT, United States</span>
-            </h3>
-          </div>
-          <div className="mentor-card">
-            <img
-              src="https://www.uptodd.com/images/newWebsite/professors/jaideep_sharma.webp"
-              loading="lazy"
-              alt="Uptodd   mentor Dr.Jaideep Sharma AIIMS"
-            />
-            <h3>
-              Dr. Jaideep Sharma
-              <br />
-              <span>MBBS &amp; MD, AIIMS, New Delhi</span>
-            </h3>
-          </div>
-          <div className="mentor-card">
-            <img
-              src="https://www.uptodd.com/images/newWebsite/professors/sudhanshu.webp"
-              loading="lazy"
-              alt="Uptodd mentor Dr.Sudhanshu Singh"
-            />
-            <h3>
-              Dr. Sudhanshu
-              <br />
-              <span>MD, DSMA CMC Vellore</span>
-            </h3>
-          </div>
-          <div className="mentor-card">
-            <img
-              src="https://www.uptodd.com/images/newWebsite/professors/manoj_mondal.webp"
-              loading="lazy"
-              alt="Uptodd mentor Prof.Manoj Mondal IIT KGP"
-            />
-            <h3>
-              Manoj Mondal
-              <br />
-              <span>Professor, IIT Kharagpur</span>
-            </h3>
-          </div>
-          <div className="mentor-card">
-            <img
-              src="https://www.uptodd.com/images/newWebsite/professors/PK_Mishra.webp"
-              loading="lazy"
-              alt="Uptodd mentor PK Mishra IIT BHU"
-            />
-            <h3>
-              Prof. PK Mishra
-              <br />
-              <span>IIT BHU</span>
-            </h3>
+        <div
+          className="mentors-list"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}>
+          <div className={`mentor-card-container ${isHovered ? "paused" : ""}`}>
+            <div className="mentor-card">
+              <img
+                src="https://www.uptodd.com/images/newWebsite/professors/krishna_vedula.webp"
+                loading="lazy"
+                alt="Uptodd mentor Prof.Krishna Vedula MIT"
+              />
+              <h3>
+                Krishna Vedula
+                <br />
+                <span>Professor, MIT, United States</span>
+              </h3>
+            </div>
+            <div className="mentor-card">
+              <img
+                src="https://www.uptodd.com/images/newWebsite/professors/jaideep_sharma.webp"
+                loading="lazy"
+                alt="Uptodd   mentor Dr.Jaideep Sharma AIIMS"
+              />
+              <h3>
+                Dr. Jaideep Sharma
+                <br />
+                <span>MBBS &amp; MD, AIIMS, New Delhi</span>
+              </h3>
+            </div>
+            <div className="mentor-card">
+              <img
+                src="https://www.uptodd.com/images/newWebsite/professors/sudhanshu.webp"
+                loading="lazy"
+                alt="Uptodd mentor Dr.Sudhanshu Singh"
+              />
+              <h3>
+                Dr. Sudhanshu
+                <br />
+                <span>MD, DSMA CMC Vellore</span>
+              </h3>
+            </div>
+            <div className="mentor-card">
+              <img
+                src="https://www.uptodd.com/images/newWebsite/professors/manoj_mondal.webp"
+                loading="lazy"
+                alt="Uptodd mentor Prof.Manoj Mondal IIT KGP"
+              />
+              <h3>
+                Manoj Mondal
+                <br />
+                <span>Professor, IIT Kharagpur</span>
+              </h3>
+            </div>
+            <div className="mentor-card">
+              <img
+                src="https://www.uptodd.com/images/newWebsite/professors/PK_Mishra.webp"
+                loading="lazy"
+                alt="Uptodd mentor PK Mishra IIT BHU"
+              />
+              <h3>
+                Prof. PK Mishra
+                <br />
+                <span>IIT BHU</span>
+              </h3>
+            </div>
           </div>
         </div>
         <h1>UpTodd™ has been Featured In</h1>
