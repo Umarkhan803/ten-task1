@@ -72,6 +72,7 @@
   }
 
   .modal-container {
+    overflow-y: scroll;
     background-color: #ffffff;
     margin-top: 400px;
     padding: 20px;
